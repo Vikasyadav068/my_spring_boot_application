@@ -13,10 +13,23 @@
     </header>
     <main>
         <p>This is a simple web application built with Spring Boot.</p>
-        <form action="" method="get">
-            <label for="name">Enter your name:</label>
-            <input type="text" id="name" name="name" required>
-            <button type="submit">Greet Me</button>
+       <form action="process-form" method="get">
+    <label>Enter First Number:</label>
+    <input type="text" id="name1" name="name1" required><br><br>
+
+    <label>Enter Second Number:</label>
+    <input type="text" id="name2" name="name2" required><br><br>
+
+    <label>Select Operation:</label>
+    <select name="operation" required>
+        <option value="add">Addition</option>
+        <option value="multiply">Multiplication</option>
+        <option value="divide">Division</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
     </main>
     <footer>
         <p>&copy; 2023 My Spring Boot Application</p>
