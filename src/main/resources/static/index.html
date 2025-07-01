@@ -1,38 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Spring Boot Application</title>
+    <title>Simple Calculator</title>
     <link rel="icon" type="image/x-icon" href="static/favicon.ico">
     <link rel="stylesheet" href="static/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #eee;
+        }
+
+        main {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 300px;
+            width: 100%;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>Welcome to My Spring Boot Application</h1>
     </header>
+
     <main>
-        <p>This is a simple web application built with Spring Boot.</p>
-       <form action="process-form" method="get">
-    <label>Enter First Number:</label>
-    <input type="text" id="name1" name="name1" required><br><br>
+        <p>This is a simple web application built with Spring Boot.</p><br><br>
 
-    <label>Enter Second Number:</label>
-    <input type="text" id="name2" name="name2" required><br><br>
+        <h2 style="color:blue;">Simple Calculator</h2>
 
-    <label>Select Operation:</label>
-    <select name="operation" required>
-        <option value="add">Addition</option>
-        <option value="multiply">Multiplication</option>
-        <option value="divide">Division</option>
-    </select><br><br>
+        <form action="process-form" method="get">
+            <label>Enter First Number:</label>
+            <input type="text" id="name1" name="name1" required>
 
-    <button type="submit">Submit</button>
-</form>
+            <label>Enter Second Number:</label>
+            <input type="text" id="name2" name="name2" required>
 
+            <label>Select Operation:</label>
+            <select name="operation" required>
+                <option value="add">Addition</option>
+                <option value="subtract">Subtraction</option>
+                <option value="multiply">Multiplication</option>
+                <option value="modulus">Modulo</option>
+                <option value="divide">Division</option>
+                <option value="percentage">Percentage</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
     </main>
+
     <footer>
         <p>&copy; 2023 My Spring Boot Application</p>
     </footer>
 </body>
+
 </html>
